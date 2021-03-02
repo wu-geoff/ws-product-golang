@@ -132,7 +132,7 @@ func processClick(data string) error {
 func statsHandler(w http.ResponseWriter, r *http.Request) {
 	if isAllowed() {
 		//Get the 1st parameter, the type of content
-		content, contentOK := r.URL.Query()["content"] 
+		content, contentOK := r.URL.Query()["content"]
 
 		//If either parameter is missing, return a 400 bad request
 		if !contentOK || len(content[0]) < 1 {
